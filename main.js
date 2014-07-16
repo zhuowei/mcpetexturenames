@@ -49,9 +49,9 @@ function buildTable() {
 }
 
 function buildTableRow(mainTable, fileName, meta) {
-	for (var i = 0; i < meta.additonal_textures.length + 1; i++) { //Note the misspelling
+	for (var i = 0; i < meta.uvs.length; i++) {
 		var rowElem = document.createElement("tr");
-		var texDat = i == 0? meta.uv: meta.additonal_textures[i - 1];
+		var texDat = meta.uvs[i];
 		var nameCellElem = document.createElement("td");
 		nameCellElem.textContent = meta.name + ", " + i;
 		var picCellElem = document.createElement("td");
