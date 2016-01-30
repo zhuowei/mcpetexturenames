@@ -69,10 +69,10 @@ function buildPicCell(picCellElem, uv, fileName, scale) {
 	var y2 = uv[3];
 	var imgWidth = uv[4];
 	var imgHeight = uv[5];
-	var sx = Math.floor(imgWidth * x1 + 0.5);
-	var sy = Math.floor(imgHeight * y1 + 0.5);
-	var width = Math.floor(imgWidth * x2 + 0.5) - sx;
-	var height = Math.floor(imgHeight * y2 + 0.5) - sy;
+	var sx = x1;
+	var sy = y1;
+	var width = x2 - x1;
+	var height = y2 - y1;
 	picCellElem.style.backgroundImage = "url(" + fileName + ")";
 	picCellElem.style.width = (scale * width) + "px";
 	picCellElem.style.height = (scale * height) + "px";
